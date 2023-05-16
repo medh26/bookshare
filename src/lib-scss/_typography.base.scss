@@ -1,0 +1,61 @@
+//* {
+//  font-family:"Montserrat","sans-serif" !important;
+//}
+body{
+  font: var(--desktop---base-regular);
+  color: var(--gray---gray-800--p);
+}
+h1, .heading-1{
+  font: var(--desktop---heading-1)
+}
+h2, .heading-2{
+  font: var(--desktop---heading-2)
+}
+h3, .heading-3{
+  font: var(--desktop---heading-3)
+}
+h4, .heading-4{
+  font: var(--desktop---heading-4)
+}
+h5, .heading-5{
+  font: var(--desktop---heading-5)
+}
+
+p, a, .body-base{
+  font: var(--desktop---base-regular);
+  &--medium{
+    font: var(--desktop---base-medium);
+  }
+  &--medium{
+    font: var(--desktop---base-semibold);
+  }
+}
+label{
+  font: var(--desktop---small-medium);
+}
+small,  .body-small{
+  font: var(--desktop---small-regular);
+  &--medium{
+    font: var(--desktop---small-medium);
+  }
+  &--medium{
+    font: var(--desktop---small-semibold);
+  }
+}
+
+.body-x-small{
+  font: var(--desktop---x-samll-regular);
+  &--medium{
+    font: var(--desktop---x-samll-medium);
+  }
+  &--medium{
+    font: var(--desktop---x-samll-semibold);
+  }
+}
+
+.subdued-text{
+  color: var(--gray---gray-500);
+}
+.text-uppercase{
+  text-transform: uppercase;
+}

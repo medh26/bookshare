@@ -1,0 +1,14 @@
+<input
+  [ngModel]="value"
+  (ngModelChange)="onChangeSelection($event)"
+  class="c-checkbox"
+  id="styled-checkbox-{{ id }}"
+  type="checkbox"
+  [checked]="checked"
+  [name]="name"
+  [disabled]="disabled">
+<label #cbxLabel for="styled-checkbox-{{ id }}">
+  <ng-content></ng-content>
+  <ng-content select="title"></ng-content>
+  <ng-content select="subtitle"></ng-content>
+</label>

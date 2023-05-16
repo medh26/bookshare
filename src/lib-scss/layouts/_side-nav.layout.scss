@@ -1,0 +1,12 @@
+.l-side-nav{
+  display: flex;
+  grid-area: side-nav;
+  width: var(--side-nav-width);
+  background-color: var(--mono---white);
+  padding: var(--space--lg) 0;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: none;
+  align-self: stretch;
+  flex-grow: 0;
+}

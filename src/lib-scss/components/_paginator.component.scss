@@ -1,0 +1,53 @@
+.c-paginator{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space--sm) var(--space--lg);
+  gap: var(--space--lg);
+  position: relative;
+  background: var(--mono---white);
+  border-top: 1px solid var(--gray---gray-200);
+}
+.c-page-group{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex: none;
+  flex-grow: 0;
+  border: 1px solid var(--gray---gray-200);
+  border-radius: var(--coner--xs);
+}
+.c-pagination-btn-item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--shadow-sm);
+  padding: var(--space--sm);
+  border-radius: var(--coner--xs);
+  font: var(--desktop---small-medium);
+  color: var(--gray---gray-500);
+  position: relative;
+  overflow: hidden;
+  height: 4rem;
+  width: 4rem;
+  border-left: 1px solid var(--gray---gray-200);
+  &:hover{
+    background: var(--gray---gray-50);
+  }
+  &:focus{
+    background: var(--gray---gray-100);
+  }
+  &:disabled{
+    background-color: var(--gray---gray-200);
+    color: var(--gray---gray-400);
+  }
+  &--active{
+    background-color: var(--brand----primary---cobalt-600--p);
+    color: var(--brand----primary---cobalt-50);
+  }
+  i{
+    font-size:2.4rem ;
+  }
+
+}

@@ -1,0 +1,26 @@
+.l-block-quote {
+  gap: var(--space--mlg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  &--neutral{
+    border-left: 2px solid var(--brand----primary---cobalt-600--p);
+    flex: 1 1 0%;
+    flex-direction: column;
+    gap: var(--space--mlg);
+
+    background-color: var(--gray---gray-50);
+    padding: var(--space--md);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  ul{
+    padding-left: var(--space--md);
+    list-style-type: disc;
+    li{
+      font: var(--desktop---x-samll-regular);
+      color: var(--gray---gray-500);
+    }
+  }
+}

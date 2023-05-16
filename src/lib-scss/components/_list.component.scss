@@ -1,0 +1,27 @@
+.list-item{
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  padding: 0 var(--space--md);
+  position: relative;
+  gap: var(--space--md);
+  &__icon{
+    font-size: 2.4rem;
+    display: block;
+    grid-area: icon;
+  }
+  &__content{
+    display: flex;
+    flex-direction: column;
+    flex: auto;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 0;
+  }
+  &__label{
+    grid-area: label;
+  }
+  &__description{
+    grid-area: description;
+  }
+}

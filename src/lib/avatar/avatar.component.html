@@ -1,0 +1,27 @@
+<div *ngIf="!labels" class="a-avatar a-avatar--{{ size }}">
+  <img *ngIf="src" src="{{ src }}" class="a-avatar__image" alt="image" />
+  <img
+    *ngIf="!src"
+    src="https://img.freepik.com/free-photo/dreamy-young-woman-sunglasses-looking-front_197531-16739.jpg"
+    class="a-avatar__image"
+    alt="image"
+  />
+</div>
+
+<ng-container *ngIf="labels">
+  <div class="a-avatar-labels-group">
+    <div  class="a-avatar a-avatar--{{ size }}">
+      <img *ngIf="src" src="{{ src }}" class="a-avatar__image" alt="image" />
+      <img
+        *ngIf="!src"
+        src="https://img.freepik.com/free-photo/dreamy-young-woman-sunglasses-looking-front_197531-16739.jpg"
+        class="a-avatar__image"
+        alt="image"
+      />
+    </div>
+    <div class="a-avatar-labels-group__label-wrapper">
+      <label class="a-avatar-labels-group__text">{{ text }}</label>
+      <p class="a-avatar-labels-group__supportingText">{{ supportingText }}</p>
+    </div>
+  </div>
+</ng-container>

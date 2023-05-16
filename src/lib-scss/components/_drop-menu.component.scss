@@ -1,0 +1,35 @@
+.c-drop-menu{
+  background-color: var(--mono---white);
+  border-radius: var(--coner--sm);
+  box-shadow: var(--shadow-lg);
+
+  &__section{
+    width: 18rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 4px 0px;
+    flex: none;
+    align-self: stretch;
+    flex-grow: 0;
+  }
+}
+
+.c-select-menu{
+  background-color: var(--mono---white);
+  border-radius: var(--coner--sm);
+  box-shadow: var(--shadow-lg);
+  display: block;
+  width: 100%;
+  max-height: 31.5rem;
+  overflow: auto;
+  &__section{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 4px 0px;
+    flex: none;
+    align-self: stretch;
+    flex-grow: 0;
+  }
+}

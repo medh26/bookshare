@@ -1,0 +1,225 @@
+$gantt-row-height: 6.8rem;
+$gantt-header-height: 9.4rem;
+$gantt-cell-width: 6.4rem;
+$gantt-time-line-item-height: 0.8rem;
+.c-gc{
+  display: flex;
+  overflow: hidden;
+  color: var(--gray---gray-800--p);
+  font-size: 14px;
+  background: var(--gray---gray-50);
+  box-sizing: border-box;
+  position: relative;
+  border: 1px solid var(--gray---gray-200);
+  border-radius: var(--coner--xs);
+  background-color: var(--mono---white);
+  flex: 1;
+  *{
+    box-sizing: border-box;
+  }
+  &__wrapper{
+    display: flex;
+    flex: 1;
+  }
+  &__list{
+    border-collapse: collapse;
+    display: flex;
+    overflow: hidden;
+    flex-grow: 0;
+    flex-shrink: 0;
+    user-select: none;
+    position: relative;
+  }
+  &__list-column{
+    position: relative;
+    touch-action: none;
+  }
+  &__list-column-header{
+    padding: var(--space--sm) var(--space--md);
+    color: var(--gray---gray-800--p);
+    display: flex;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: middle;
+    font: var(--desktop---small-medium);
+    border-bottom: 1px solid var(--gray---gray-200);
+    border-right: 1px solid var(--gray---gray-200);
+    background-color:  var(--gray---gray-50);
+    text-transform: uppercase;
+    height: $gantt-header-height;
+
+  }
+  &__list-column-rows{
+    overflow: hidden;
+    //position: absolute;
+  }
+  &__list-column-row{
+    overflow: hidden;
+    height:$gantt-row-height ;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: var(--height);
+    vertical-align: middle;
+    font-size: 14px;
+    display: flex;
+    color: var(--gray---gray-800--p);
+    border-right: 1px solid var(--gray---gray-200);
+    + .c-gc__list-column-row{
+      border-top: 1px solid var(--gray---gray-200);
+    }
+  }
+  &__list-column-row-content{
+    height:$gantt-row-height ;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: var(--space--smd) var(--space--md);
+    flex-shrink: 0;
+    flex-grow: 1;
+  }
+
+  &__chart{
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    position: relative;
+    overflow: auto;
+    flex-direction: column;
+  }
+  &__chart-calendar{
+    background: #f9fafb;
+    width: max-content;
+    display: flex;
+    flex-wrap: wrap;
+    //height: $gantt-header-height;
+  }
+  &__chart-calendar-dates{
+    overflow: hidden;
+    color: var(--gray---gray-800--p);
+    user-select: none;
+    display: flex;
+    width: 100%;
+    &--level-0{
+
+      border-bottom: 1px solid var(--gray---gray-200);
+    }
+    &--level-1{
+      border-bottom: 1px solid var(--gray---gray-200);
+    }
+  }
+  &__chart-calendar-date{
+    flex-grow: 0;
+    flex-shrink: 0;
+    border: none;
+    white-space: nowrap;
+    width: $gantt-cell-width;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: var(--space--sm) var(--space--smd);
+    + .c-gc__chart-calendar-date{
+      border-left: 1px solid var(--gray---gray-200);
+    }
+    &--day{
+      text-align: center;
+    }
+    &--month{
+      font: var(--desktop---small-medium);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      padding: var(--space--sm) var(--space--smd);
+      left: 0;
+      + .c-gc__chart-calendar-date--month{
+        border-left: 1px solid var(--gray---gray-200);
+      }
+    }
+  }
+  &__chart-timeline{
+    overflow: hidden;
+    display: flex;
+    align-self: stretch;
+    width: 100%;
+  }
+  &__chart-timeline-inner{
+    overflow: hidden;
+    width: 100%;
+  }
+  &____chart-timeline-grid{
+    overflow: hidden;
+    width: 100%;
+  }
+  &__chart-timeline-grid-row{
+    display: flex;
+    text-align: center;
+    user-select: none;
+    pointer-events: all;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+  }
+  &__chart-timeline-grid-row-cell{
+    pointer-events: all;
+    flex-grow: 0;
+    flex-shrink: 0;
+    vertical-align: middle;
+    overflow: hidden;
+    border-right: 1px solid var(--gray---gray-200);
+    border-bottom: 1px solid var(--gray---gray-200);
+    touch-action: none;
+    height: $gantt-row-height;
+    width: $gantt-cell-width;
+    &--weekend{
+      background-color: var(--gray---gray-200);
+    }
+  }
+}
+
+
+.c-gc-timeline-item{
+  position: absolute;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  pointer-events: none;
+  align-items: center;
+  z-index: 1;
+  height: $gantt-row-height;
+
+  &__wrapper{
+    height:$gantt-time-line-item-height ;
+    display: flex;
+    overflow: hidden;
+    pointer-events: none;
+    width: 100%;
+    position: absolute;
+    background-color: var(--gray---gray-200);
+    border-radius: var(--coner--xs);
+  }
+  &__progress{
+    background-size: auto auto;
+    background-color: rgba(255,255,255,0);
+    background-image: repeating-linear-gradient(135deg, transparent, transparent 10px, rgba(255,255,255,0.15) 10px, rgba(255,255,255,0.15) 20px);
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    height: 100%;
+  }
+  &__content{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  &__milestone{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: $gantt-row-height;
+    width: $gantt-cell-width;
+    z-index: 10;
+    font-size: 2.4rem;
+    color: inherit;
+  }
+}

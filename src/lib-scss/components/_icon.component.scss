@@ -1,0 +1,47 @@
+$icon-height--default: 24px;
+.eg-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.4rem;
+
+  &--sm{
+    position: relative;
+    font-size: 1.6rem;
+    &:before{
+
+    }
+  }
+  &--md{
+    position: relative;
+    font-size: 2.4rem;
+  }
+  &--lg{
+  position: relative;
+    font-size: 3.2rem;
+  }
+  &--xl{
+    position: relative;
+    height: 4rem;
+    width: 4rem;
+    font-size: 4rem;
+    &:before{
+      position: absolute;
+      top: 20%;
+      left: 0;
+    }
+  }
+}
+
+.eg-warning-icon{
+  border-radius: 7rem;
+  border: 8px solid var(--yellow---yellow-100) ;
+  color: var(--yellow---yellow-400--p);
+}
+
+
+.eg-success-icon{
+  border-radius: 7rem;
+  border: 8px solid var(--green---green-100) ;
+  color: var(--green---green-400--p);
+}

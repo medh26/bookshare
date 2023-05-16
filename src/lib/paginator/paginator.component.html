@@ -1,0 +1,12 @@
+<div class="c-page-group" *ngIf="showPageLinks">
+  <button egButton color="default" size="small" ><eg-icon icon="arrow-left-line"></eg-icon>Previous</button>
+  <button *ngFor="let pageLink of pageLinks" class="c-pagination-btn-item" [ngClass]="{ 'p-c-pagination-btn-item--active': pageLink - 1 == getPage() }" (click)="onPageLinkClick($event, pageLink - 1)"> {{ pageLink }}</button>
+  <button egButton color="default" size="small">Next <eg-icon icon="arrow-right-line"></eg-icon></button>
+</div>
+<eg-select
+  id="test-id"
+  label="Label"
+  placeholder="Select an option"
+>
+  <eg-select-option *ngFor="pageItems" value="Iconic options">Option 1</eg-select-option>
+</eg-select>

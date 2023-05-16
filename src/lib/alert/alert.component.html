@@ -1,0 +1,15 @@
+<div class='c-alert' [ngClass]="{
+      'c-alert--info': data.level === LEVEL.INFO,
+      'c-alert--success': data.level === LEVEL.SUCCESS,
+      'c-alert--warning': data.level === LEVEL.WARN,
+      'c-alert--critical': data.level === LEVEL.ERROR
+    }">
+  <div class='c-alert__container'>
+    <i *ngIf="data.icon" class='c-alert__icon' [ngClass]="data.icon"></i>
+    <div class="c-alert__content">
+      <div *ngIf="data.title" class="c-alert__title">{{data.title }}</div>
+      <div *ngIf="data.message" class="c-alert__text">{{data.message }}</div>
+    </div>
+    <button (click)="onClose()" egIconButton color='link' class="c-alert__action"><i class="ri-close-fill"></i></button>
+  </div>
+</div>

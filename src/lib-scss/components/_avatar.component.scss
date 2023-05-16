@@ -1,0 +1,109 @@
+$avatar-size: 32px !default;
+$avatar-size: 32px !default;
+$avatar-xsmall: 16px !default;
+$avatar-small: 32px !default;
+$avatar-medium: 40px !default;
+$avatar-large: 96px !default;
+$avatar-xlarge: 128px !default;
+$avatar-xxlarge: 256px !default;
+
+.a-avatar {
+  padding: 0;
+  min-width: 0;
+  width: $avatar-size;
+  height: $avatar-size;
+  box-sizing: border-box;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  text-decoration: none;
+  vertical-align: baseline;
+  text-align: center;
+  background-color: var(--gray---gray-50);
+  overflow: hidden;
+  border-radius: 100px;
+  &__image {
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    background-color: var(--brand----primary---cobalt-600--p);
+    color: var(--brand----primary---cobalt-600--p);
+  }
+
+  &--xsmall {
+    height: $avatar-xsmall;
+    width: $avatar-xsmall;
+    border-radius: $avatar-xsmall;
+  }
+  &--small {
+    height: $avatar-small;
+    width: $avatar-small;
+    border-radius: $avatar-small;
+  }
+  &--medium {
+    height: $avatar-medium;
+    width: $avatar-medium;
+    border-radius: $avatar-medium;
+  }
+  &--large {
+    height: $avatar-large;
+    width: $avatar-large;
+    border-radius: $avatar-large;
+  }
+  &--xlarge {
+    height: $avatar-xlarge;
+    width: $avatar-xlarge;
+    border-radius: $avatar-xlarge;
+  }
+  &--xxlarge {
+    height: $avatar-xxlarge;
+    width: $avatar-xxlarge;
+    border-radius: $avatar-xxlarge;
+  }
+  &--user {
+    cursor: pointer;
+    user-select: none;
+    border-radius: $avatar-size;
+    .avatar-image {
+      width: $avatar-size;
+      height: $avatar-size;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+}
+.a-avatar-labels-group{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  .a-avatar {
+    margin-right: 1rem;
+  }
+  &__label-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+
+  }
+  &__text{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--gray---gray-800--p)
+  }
+  &__supportingText{
+    color: var(--gray---gray-500);
+    margin: 0;
+  }
+}
+.avatar-group{
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space--md);
+}

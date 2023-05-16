@@ -1,0 +1,76 @@
+.c-calender{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  gap: 12px;
+  position: relative;
+  background: var(--mono---white);
+  box-shadow: var(--shadow-xl);
+  border-radius: 4px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  box-sizing: border-box;
+}
+
+.month-header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: var(--space--sm);
+  flex: 1;
+  align-self: stretch;
+  flex-grow: 0;
+  box-sizing: border-box;
+  width: 100%;
+  &__caption{
+    text-align: center;
+    color: var(--gray---gray-800--p);
+    flex: none;
+    flex-grow: 1;
+    font: var(--desktop---heading-5);
+  }
+}
+.days-of-week{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  align-self: stretch;
+  &__day{
+    text-align: center;
+    font: var(--desktop---small-regular)
+  }
+}
+.month{
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  &__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    align-self: stretch;
+    align-items: center;
+    justify-content: center;
+  }
+  &__date{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--space--smd) var(--space--smd);
+    border-radius: 4px;
+    font: var(--desktop---small-medium);
+    color: var(--gray---gray-800--p);
+    flex: none;
+    flex-grow: 0;
+    &:hover:not(.month__date--active){
+      background-color: var(--gray---gray-100);
+    }
+    &--active{
+      background-color: var(--brand----primary---cobalt-600--p);
+      color: var(--brand----primary---cobalt-50);
+    }
+  }
+}
