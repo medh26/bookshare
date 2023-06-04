@@ -1,7 +1,0 @@
-<eg-checkbox
-  [disabled]="disabled" [ngModelOptions]="{standalone: true}"
-  *ngFor="let option of options; let i = index"
-  [id]="option" [ngModel]="_values[i]"
-  (ngModelChange)="valueChange(i, $event)">
-  {{option }}
-</eg-checkbox>
