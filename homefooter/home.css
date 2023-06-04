@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.full-page {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(https://collegebookstore.in/wp-content/uploads/2021/02/online-book-shopping-sites-in-india.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    /*setting background imag and position */
+}
+
+.navigation-bar {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    padding-left: 80px;
+      /* setting the dimensions of the navigation bar */
+
+}
+
+.logo {
+    position: fixed;
+    margin-top: 10px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: rgb(8, 147, 31);
+    font-size: 30px;
+}
+
+nav {
+    flex: 1;
+    position: fixed;
+    right: 0;
+}
+
+nav ul {
+    display: inline-block;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 90px;
+    margin-top: 17px;
+    /* this blocks are for styling list element s*/
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    font-family: sans-serif;
+}
+
+nav ul li button {
+    font-size: 20px;
+    color: white;
+    outline: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: sans-serif;
+}
+
+nav ul li button:hover {
+    color: rgb(208, 255, 0);
+}
+
+nav ul li a:hover {
+    color: rgb(255, 255, 0);
+}
+
+
+

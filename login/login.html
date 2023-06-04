@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--icons link-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <title>User Login</title>
+</head>
+<body>
+    <h2>User Login</h2>
+    <!--old code
+    <form action="login.php" method="POST">
+        
+        <label for="userId">User ID:</label>
+        <input type="text" id="userId" name="userId" required><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <input type="submit" value="Login">
+    </form> -->
+    <div class="container">
+        <div class="forms">
+            <div class="form login">
+                <span class="title">Login</span>
+
+                <form action="#">
+                    <div class="input-field">
+                        <input type="text" placeholder="Enter your email" required>
+                        <i class="uil uil-envelope icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" class="password" placeholder="Enter your password" required>
+                        <i class="uil uil-lock icon"></i>
+                        <i class="uil uil-eye-slash showHidePw"></i>
+                    </div>
+
+                    <div class="checkbox-text">
+                        <div class="checkbox-content">
+                            <input type="checkbox" id="logCheck">
+                            <label for="logCheck" class="text">Remember me</label>
+                        </div>
+                        
+                        <a href="#" class="text">Forgot password?</a>
+                    </div>
+
+                    <div class="input-field button">
+                        <a href="../SearchPage/search.html">
+                        <input type="button" value="Login">
+                    </a>
+                    </div>
+                </form>
+
+               
+            </div>
+    <p>Don't have an account?  </p>
+    <a href="../registration/registration.html">Register here</a>
+</body>
+</html>
