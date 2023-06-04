@@ -9,36 +9,37 @@
 }
 
 body{
-    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #2F4F4F;
+    overflow: auto;
+    height: 100vh;
 }
 
 .container{
     position: relative;
     max-width: 430px;
     width: 100%;
-    /*height: 800px;*/
+    height: max-content;
     background: #fff;
    /* border-radius: 10px;*/
+    max-height: 800px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
     margin: 0 30px;
 }
 
 .container .forms{
     display: flex;
     align-items: center;
-    height: 440px;
-    width: 200%;
+    height: max-content;
+    width: 100%;
     transition: height 0.2s ease;
 }
 
 
 .container .form{
-    width: 50%;
+    width: 100%;
     padding: 30px;
     background-color: #fff;
     transition: margin-left 0.18s ease;
@@ -51,7 +52,7 @@ body{
 }
 
 .container .signup{
-    opacity: 0;
+    opacity: 1;
     transition: opacity 0.09s ease;
 }
 .container.active .signup{
